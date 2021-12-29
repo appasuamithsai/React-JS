@@ -7,6 +7,7 @@ import { AddTodo } from './MyComponents/AddTodo';
 
 import { BrowserRouter as Router, Routes ,Route } from 'react-router-dom';
 import { About } from './MyComponents/About';
+import Temp from './MyComponents/Temp';
 function App() {
   let initTodo;
   if (localStorage.getItem('todos')) {
@@ -31,7 +32,7 @@ function App() {
     setTodos([...todos, myTodo]);
   };
 
-  const [todos, setTodos] = useState(initTodo);
+  const [todos, setTodos] = useState([]);
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
@@ -39,6 +40,7 @@ function App() {
     <>
       <Router>
         <Header title="My Todos List" searchBar={true} />
+        <Temp></Temp>
         <Routes>
           <Route path="/" element={
             <>
