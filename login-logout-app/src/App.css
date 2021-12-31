@@ -1,0 +1,20 @@
+#container{
+  border: 2px solid black;
+  padding: 40px;
+  position: absolute;
+  top: 250px;
+  left: 580px;
+  box-shadow: 2px 2px 10px #c3c3c3;
+  opacity: 0.9;
+  background-color: wheat;
+  /* display: flex ;
+  justify-content: center;
+  align-items: center;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh; */
+}
+/* .inner{
+  border: 1px solid;
+} */
