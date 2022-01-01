@@ -32,6 +32,7 @@ interface Employee{
 var emp1:Employee={
     name:"ram",
     dept:"CSE",
+    id:12,
 };
 
 console.log(emp1);
@@ -39,7 +40,7 @@ console.log(emp1);
 var emp2:Employee={
     name:"SHam",
     dept:"EEE",
+    id:23,
 };
 
  console.log(emp2);
- 
