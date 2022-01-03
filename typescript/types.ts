@@ -1,13 +1,13 @@
 //primitives in JS 
 
-/*
-number 
-string
-bigint
-symbol
-boolean 
-null undefined
-*/
+// /*
+// number 
+// string
+// bigint
+// symbol
+// boolean 
+// null undefined
+// */
 
 
 
