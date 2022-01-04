@@ -1,11 +1,13 @@
-import { Typography } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import React from 'react';
 import { makeStyles } from '@mui/styles';
 const customStyles=makeStyles({
     btnStyle:{
       color:"cyan",
       fontStyle:"oblique",
-  
+      '&:hover':{
+        color:"Yellow"
+      },
     }
   });
 const StylesMui = () => {
@@ -19,6 +21,8 @@ const StylesMui = () => {
         align="center"
         bgcolor="red"
         component="div" >Welcome</Typography>
+
+       
     </div>;
 }
 
