@@ -43,15 +43,14 @@ const list = [
 ];
 
 
-
 interface Handle{
-  handlePage:()=>void;
-}
+  handleChange:()=>void;
 
+}
 
 const ExploreMenu = (props:Handle) => {
   const component = list.map((e) => (
-    <Buttons itemname={e.name} itemicon={e.comp} handlePage={props.handlePage}/>
+    <Buttons handleChange={props.handleChange} itemname={e.name} itemicon={e.comp}/>
   ));
 
   return (

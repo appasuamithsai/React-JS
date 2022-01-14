@@ -1,21 +1,17 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-
+import customStyle from "../../../Theme";
 interface AuthDet{
     authName:string,
 }
 
 const AuthorName = (props:AuthDet) => {
+    const classes=customStyle();
     return (<>
          <Typography 
          variant='body1'
-         sx={{
-            // fontFamily: "Cera Pro",
-            fontStyle: "normal",
-            fontSize: "16px",
-            fontWeight: 500,
-            color:"#6D787E",
-            }}>
+         className={classes.authorNameTypography}
+         >
                {props.authName}
             </Typography>
     </>);

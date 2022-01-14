@@ -1,6 +1,6 @@
 import { Box, Card, CardMedia, Grid } from "@mui/material";
 import React from "react";
-import ReadTime from "../../molecule/ReadTime";
+import ReadTime from "../../molecule/read-time/ReadTime";
 import AuthorName from "../../atoms/author/AuthorName";
 import BookNote from "../../atoms/bookpagedetails/booknote/BookNote";
 import FinishReading from "../../atoms/bookpagedetails/bookoptions/finishbutton/FinishReading";
@@ -13,6 +13,7 @@ import bookimage from "../../atoms/assets/bookimage.png";
 
 interface Handle{
   handleFinish:(item:string)=>void;
+  btn:boolean;
 }
 
 
@@ -45,7 +46,7 @@ const BookDetailsGrid = (props:Handle) => {
                       <ReadNow />
                     </Grid>
                     <Grid item>
-                      <FinishReading bookName="Beyond Entrepreneurship 2.0" handleFinish={props.handleFinish} />
+                      <FinishReading btn={props.btn} bookName="Beyond Entrepreneurship 2.0" handleFinish={props.handleFinish} />
                     </Grid>
                     <Grid item>
                       <SendToKindle />

@@ -12,16 +12,13 @@ export default {
 } as ComponentMeta<typeof MainSearch>;
 
 
-const Template: ComponentStory<typeof MainSearch> = () => <MainSearch />;
+const Template: ComponentStory<typeof MainSearch> = (args) => <MainSearch {...args}/>;
 
 
 
 
 export const Primary = Template.bind({});
 
-Primary.args = {
 
-    details: [{image:book2, name:"Bring Your Human to Work", author:"Erica Keswin", time :"13-minute read"}],
-  };
   
 

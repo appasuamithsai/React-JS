@@ -1,8 +1,13 @@
-import { Grid, InputAdornment, TextField } from "@mui/material";
+import {  InputAdornment, TextField } from "@mui/material";
 import React from "react";
 import SerachIcon from '../../atoms/search-icon/SearchIcon';
 
-const MainSearch = () => {
+interface Handle{
+  search:(item:string)=>void;
+}
+
+
+const MainSearch = (props:Handle) => {
   return (
     <TextField
     variant="standard"
@@ -25,6 +30,9 @@ const MainSearch = () => {
           padding:'16px',
           fontWeight:'700',
           fontSize:'24px'
+      }}
+      onChange={(e)=>{
+        props.search(e.target.value.toLowerCase());
       }}
     />
   );

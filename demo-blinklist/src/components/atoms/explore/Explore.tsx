@@ -1,16 +1,15 @@
 import { Button } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import NavDown from "../nav/NavDown";
-import { useState } from "react";
-import NavUp from "../nav/NavUp";
+import NavDown from "../nav/nav-down/NavDown";
+import NavUp from "../nav/nav-up/NavUp";
 
 interface Handle{
     handleChange:()=>void;
+    icon:boolean;
   }
   
 
 const Explore = (props:Handle) => {
-  const [icon, seticon] = useState(false);
+  
   return (
     <Button
       sx={{
@@ -20,9 +19,9 @@ const Explore = (props:Handle) => {
         fontWeight: 500,
         color: "#03314B",
       }}
-      endIcon={icon ? <NavUp /> : <NavDown />}
+      endIcon={props.icon ? <NavUp /> : <NavDown />}
       onClick={() => {
-          seticon(!icon)
+          
           props.handleChange();
         }}
     >

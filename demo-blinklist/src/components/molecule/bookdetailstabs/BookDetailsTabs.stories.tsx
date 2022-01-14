@@ -5,7 +5,7 @@ import BookDetailsTabs from './BookDetailsTabs';
 
 
 export default {
-  title: 'organisam/bookdetailstabs/BookDetailsTabs',
+  title: 'molecule/bookdetailstabs/BookDetailsTabs',
   component: BookDetailsTabs,
 
 } as ComponentMeta<typeof BookDetailsTabs>;
@@ -18,6 +18,3 @@ const Template: ComponentStory<typeof BookDetailsTabs> = () => <BookDetailsTabs 
 
 export const Primary = Template.bind({});
 
-Primary.args = {
- };
-  
