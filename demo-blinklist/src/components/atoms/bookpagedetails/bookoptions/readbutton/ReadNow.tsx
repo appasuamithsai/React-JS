@@ -1,18 +1,15 @@
 import { Button  } from "@mui/material";
 
+import customStyle from "../../../../../Theme";
 
 
 const ReadNow = () => {
+  const classes=customStyle();
   return (
       <Button
-        sx={{
-          fontSize: "16px",
-          fontWeight: 500,
-          color: "#22C870",
-          borderColor:'#111',
-          textTransform:'none',
-        }}
+        className={classes.readNow}
         variant="outlined"
+        component="button"
       >
        Read now
       </Button>

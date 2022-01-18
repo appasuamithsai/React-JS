@@ -2,7 +2,7 @@ import BannerTwo from "./BannerTwo";
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 export default {
-    title:'atoms/banner/BannerTwo',
+    title:'atoms/banner/banner-two/BannerTwo',
     Component: BannerTwo,
 }as ComponentMeta<typeof BannerTwo>
 

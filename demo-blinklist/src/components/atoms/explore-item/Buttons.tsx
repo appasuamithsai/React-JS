@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
-import { Link, MemoryRouter as Router } from "react-router-dom";
+import { Link} from "react-router-dom";
+import customStyle from "../../../Theme";
 
 interface ButtonType {
   itemname: string;
@@ -9,28 +10,18 @@ interface ButtonType {
 }
 
 export const Buttons = (props: ButtonType) => {
+  const classes=customStyle();
   return (
-    //<Router>
       <Link to="/explore" style={{ textDecoration: "none" }}>
         <Button
           variant="text"
-          sx={{
-            textTransform: "none",
-            color: "#6D787E",
-            fontWeight: "400",
-            fontStyle: "Normal",
-            fontSize: "16px",
-            "&:hover": {
-              color: "#0365F2",
-            },
-          }}
+          className={classes.buttons}
           startIcon={props.itemicon}
           onClick={() => props.handleChange()}
         >
           {props.itemname}
         </Button>
       </Link>
-   // </Router>
   );
 };
 

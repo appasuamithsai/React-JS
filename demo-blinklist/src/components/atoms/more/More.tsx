@@ -1,14 +1,14 @@
 import React from "react";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { IconButton } from "@mui/material";
+import customStyle from "../../../Theme";
 
 const More = () => {
+  const classes=customStyle();
   return (
     <IconButton
-      sx={{
-        position: "relative",
-        left: "80.75%",
-      }}
+      className={classes.more}
+      data-testid="more"
     >
       <MoreHorizIcon></MoreHorizIcon>
     </IconButton>

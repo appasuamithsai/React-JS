@@ -21,6 +21,7 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { Divider, Grid } from "@mui/material";
 import ExploreMenuHead from "../explore-grid-head/ExploreMenuHead";
+import customStyle from "../../../../Theme";
 const list = [
   { name: "Entrepreneurship", comp: <RocketLaunchOutlinedIcon /> },
   { name: "Science", comp: <ScienceOutlinedIcon /> },
@@ -49,37 +50,31 @@ interface Handle{
 }
 
 const ExploreMenu = (props:Handle) => {
-  const component = list.map((e) => (
-    <Buttons handleChange={props.handleChange} itemname={e.name} itemicon={e.comp}/>
-  ));
-
+  let count=1;
+  const component = list.map((e) => ({
+   id:count++,comp: <Buttons handleChange={props.handleChange} itemname={e.name} itemicon={e.comp}/>
+ } ));
+    const classes=customStyle();
   return (
     <Box
       zIndex="1"
-      sx={{
-        position: "absolute",
-        height: "100%",
-      }}
+      className={classes.exploreBoxOne}
     >
       <Box
-        sx={{
-          paddingLeft: "254px",
-          backgroundColor: "#F1F6F4",
-          paddingBottom: "15px",
-        }}
+         className={classes.exploreBoxTwo}
       >
         <ExploreMenuHead />
-        <Divider sx={{ marginRight: "250px" }} />
-        <Grid container rowSpacing="18px" sx={{ paddingTop: "10px" }}>
+        <Divider className={classes.exploreDiv}  />
+        <Grid container rowSpacing="18px" className={classes.exploreGrid} >
           {component.map((e) => (
-            <Grid item xs={4}>
-              {e}
+            <Grid item xs={4} key={e.id}>
+              {e.comp}
             </Grid>
           ))}
         </Grid>
       </Box>
       <Box
-        sx={{ backgroundColor: "#111", height: "100%", width: "100%",opacity:'0.4' }}
+        className={classes.exploreBoxThree}
       ></Box>
     </Box>
   );

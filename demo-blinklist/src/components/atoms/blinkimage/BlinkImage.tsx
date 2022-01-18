@@ -1,13 +1,13 @@
 import { Card, CardMedia } from "@mui/material";
 import React from "react";
 import appname from "../assets/appname.png";
-import { Link,MemoryRouter as Router } from "react-router-dom";
-
+import { Link } from "react-router-dom";
+import customStyle from "../../../Theme";
 const BlinkImage = () => {
+  const classes=customStyle();
   return (
-    //  <Router>
       <Link to="/">
-        <Card sx={{ border: "none", boxShadow: "none" }}>
+        <Card  className={classes.blinkCard}>
           <CardMedia
             component="img"
             height="26px"
@@ -17,7 +17,6 @@ const BlinkImage = () => {
           />
         </Card>
       </Link>
-    // </Router>
   );
 };
 

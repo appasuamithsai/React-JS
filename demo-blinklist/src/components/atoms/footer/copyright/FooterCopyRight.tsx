@@ -1,18 +1,16 @@
 import React from 'react';
 import { Typography } from '@mui/material';
+import customStyle from '../../../../Theme';
 
 
 const FooterCopyRight = () => {
+   const classes=customStyle();
     return (<>
          <Typography 
          variant='body1'
-         sx={{
-            fontStyle: "normal",
-            fontSize: "14px",
-            fontWeight: 400,
-            margin: " 16px 0px 0px 16px",
-            color:"#6D787E",
-            }}>
+         className={classes.footerCopyRight}
+         data-testid="copyright"
+         >
                © Blinkist 2021 Sitemap   |   Imprint   |   Terms of Service   |   Privacy Policies
             </Typography>
     </>);

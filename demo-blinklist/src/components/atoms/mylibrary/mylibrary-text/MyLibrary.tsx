@@ -1,24 +1,13 @@
 
 import { Typography } from '@mui/material';
-import { createTheme,ThemeProvider } from '@mui/material/styles';
 
-
-const theme=createTheme({
-    typography:{
-        body1:{
-            fontSize:16,
-            fontWeight:500,
-            color:'#03314B',
-        }
-    }
-}); 
+import customStyle from "../../../../Theme";
 
 const MyLibrary = () => {
-    return <ThemeProvider theme={theme} >
-        <Typography variant='body1' >
-           MyLibrary
-        </Typography>
-    </ThemeProvider >;
+    const classes=customStyle();
+    return (<Typography variant='body1' className={classes.myLibrary} >
+           My Library
+        </Typography>);
 }
 
 export default MyLibrary;

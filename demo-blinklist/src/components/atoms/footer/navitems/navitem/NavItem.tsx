@@ -1,21 +1,16 @@
 import React from "react";
 import { Typography } from "@mui/material";
+import customStyle from "../../../../../Theme";
 interface NavItemName {
   name: string;
 }
 const NavItem = (props: NavItemName) => {
+  const classes=customStyle();
   return (
     <>
       <Typography
         variant="body2"
-        sx={{
-          width: "214px",
-          marginTop: "16px",
-          fontStyle: "normal",
-          fontSize: "16px",
-          fontWeight: 400,
-          color: "#6D787E",
-        }}
+        className={classes.navItem}
       >
         {props.name}
       </Typography>

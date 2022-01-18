@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link } from "react-router-dom";
+import customStyle from "../../../../../Theme";
 
 interface Handle {
   handleFinish: (item: string) => void;
@@ -12,28 +13,24 @@ const FinishReading = (props: Handle) => {
   const set = () => {
     props.handleFinish(props.bookName);
   };
+  const classes = customStyle();
   return (
-   
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <Button
-          sx={{
-            fontWeight: 500,
-            fontSize: "16px",
-            color: "#03314B",
+    <Link to="/" style={{ textDecoration: "none" }}>
+      <Button
+        onClick={set}
+        className={classes.finishReading}
+        sx={{
+          display: props.btn ? "none" : "",
+          "&:hover": {
             backgroundColor: "#2CE080",
-            textTransform: "none",
-            borderColor: "none",
-            display: props.btn ? "none" : "",
-            "&:hover": {
-              backgroundColor: "#2CE080",
-            },
-          }}
-          onClick={set}
-          variant="contained"
-        >
-          Finished Reading
-        </Button>
-      </Link>
+          },
+        }}
+        variant="contained"
+        component="button"
+      >
+        Finished Reading
+      </Button>
+    </Link>
   );
 };
 

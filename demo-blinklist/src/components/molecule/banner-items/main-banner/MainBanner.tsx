@@ -1,16 +1,16 @@
 import { Grid } from '@mui/material';
 import React from 'react';
+import customStyle from '../../../../Theme';
 import BannerImage from '../../../atoms/banner/banner-image/BannerImage';
 import BannerItems from '../banner-item/BannerItems';
 
 const MainBanner = () => {
-    return (<Grid container sx={{ backgroundColor:'#F1F6F4',marginLeft:'270px',width:'912px'}}>
-        <Grid item sx={{
-            margin:'45px'
-        }}>
+    const classes=customStyle();
+    return (<Grid container className={classes.mainBanner}>
+        <Grid item className={classes.mainBannerItem}>
             <BannerItems />
         </Grid>
-        <Grid item sx={{margin:'20px'}}>
+        <Grid item>
             <BannerImage />
         </Grid>
     </Grid>);

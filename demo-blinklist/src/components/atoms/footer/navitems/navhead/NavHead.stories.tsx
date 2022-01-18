@@ -2,7 +2,7 @@ import NavHead from './NavHead';
 import {ComponentMeta , ComponentStory} from  '@storybook/react';
 
 export default {
-    title:'atoms/footer/navitems/NavHead',
+    title:'atoms/footer/navitems/navhead/NavHead',
     Component:NavHead,
 } as ComponentMeta<typeof NavHead>;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import book2 from '../../atoms/assets/book2.png';
+import book2 from '../../../atoms/assets/book2.png';
 import CardAdd from './CardAdd';
 import { MemoryRouter } from 'react-router-dom';
 

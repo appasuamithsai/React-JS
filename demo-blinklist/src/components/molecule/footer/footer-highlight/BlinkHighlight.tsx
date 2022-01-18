@@ -1,22 +1,22 @@
 import { Grid } from "@mui/material";
 import React from "react";
+import customStyle from "../../../../Theme";
 import BlinkImage from "../../../atoms/blinkimage/BlinkImage";
 import FooterHighlight from "../../../atoms/footer/footerhightlight/FooterHighlight";
 
 const BlinkHighlight = () => {
+  const classes=customStyle();
   return (
     <Grid
       container
-      sx={{
-        width: "378px",
-        height: "128px",
-      }}
+      className={classes.blinkHighlightGridOne}
       direction="row"
+      data-testid="blinkHighlight"
     >
-      <Grid item sx={{ height :"26px", width : "124px" }}>
+      <Grid item className={classes.blinkHighlightGridTwo}>
         <BlinkImage />
       </Grid>
-      <Grid sx={{marginTop:'32px'}} item>
+      <Grid className={classes.blinkHighlightGridThree} item>
         <FooterHighlight />
       </Grid>
     </Grid>

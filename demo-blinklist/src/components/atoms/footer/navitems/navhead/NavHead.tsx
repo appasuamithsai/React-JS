@@ -1,19 +1,16 @@
 import React from "react";
 import { Typography } from "@mui/material";
+import customStyle from "../../../../../Theme";
 interface NavHeadName{
     name:string
 }
 const NavHead = (props:NavHeadName) => {
+  const classes=customStyle();
   return (
     <>
       <Typography
         variant="body1"
-        sx={{
-          fontStyle: "normal",
-          fontSize: "16px",
-          fontWeight: 700,
-          color: "#03314B",
-        }}
+        className={classes.navHead}
       >
         {props.name}
       </Typography>

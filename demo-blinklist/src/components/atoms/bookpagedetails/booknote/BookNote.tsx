@@ -1,30 +1,16 @@
 import { Typography } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import customStyle from "../../../../Theme";
 
-const theme = createTheme({
-  typography: {
-    h1: {
-      fontSize: "36px",
-      fontWeight: 700,
-      color: "#03314B",
-    },
-  },
-});
 
 const BookNote = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <Typography
-        sx={{
-          fontSize: "20px",
-          fontWeight: 400,
-          color: "#03314B",
-        }}
+  const classes=customStyle();
+  return (<Typography
+        className={classes.bookNote}
         variant="subtitle2"
+        data-testid="BookNote"
       >
           Turning Your Business into an Enduring Great Company
       </Typography>
-    </ThemeProvider>
   );
 };
 

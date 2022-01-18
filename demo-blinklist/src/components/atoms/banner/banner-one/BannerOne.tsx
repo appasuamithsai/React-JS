@@ -1,15 +1,12 @@
 import { Typography } from "@mui/material";
 import React from "react";
-
+import customStyle from "../../../../Theme";
 const BannerOne = () => {
+  const classes=customStyle();
   return (
     <Typography
       variant="h1"
-      sx={{
-        fontWeight: "700",
-        fontSize: "36px",
-        color:'#03314B',
-      }}
+      className={classes.bannerOne}
       width="319px"
     >
       Explore Books on entrepreneurship
