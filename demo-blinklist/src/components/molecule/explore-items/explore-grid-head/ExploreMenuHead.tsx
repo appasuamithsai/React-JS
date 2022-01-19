@@ -4,7 +4,7 @@ import customStyle from "../../../../Theme";
 const ExploreMenuHead = () => {
   const classes=customStyle();
   return (
-    <Grid container sx={{paddingTop:'30px',paddingBottom:'24px'}}>
+    <Grid container sx={{paddingTop:'30px',paddingBottom:'24px'}}  >
       <Grid item xs={4}>
         <Typography
           variant="subtitle2"

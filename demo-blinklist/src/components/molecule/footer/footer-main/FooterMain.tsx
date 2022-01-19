@@ -8,22 +8,43 @@ import FooterNavListTwo from "../footer-navlist/FooterNavListTwo";
 
 const FooterMain = () => {
   return (
-    <Grid container direction="column" sx={{backgroundColor:"#F1F6F4",marginTop:'111px'}}>
+    <Grid
+      container
+      direction="column"
+      sx={{ backgroundColor: "#F1F6F4", marginTop: "111px" }}
+    >
       <Grid item>
-
-
-        <Grid container columnSpacing='32px' sx={{marginTop:'38px'}} >
-        <Grid item sx={{
-        marginLeft: "244px"}}><BlinkHighlight /> </Grid>
-        <Grid item> <FooterNavListOne /></Grid>
-        <Grid item> <FooterNavListTwo /></Grid>
-        <Grid item> <FooterNavListThree /></Grid>
+        <Grid
+          container
+          columnSpacing="32px"
+          justifyContent="center"
+          sx={{ marginTop: "38px" }}
+        >
+          <Grid
+            item
+            sx={{marginLeft:'102px'}}
+          >
+            <BlinkHighlight />
+          </Grid>
+          <Grid item>
+            <FooterNavListOne />
+          </Grid>
+          <Grid item>
+            <FooterNavListTwo />
+          </Grid>
+          <Grid item>
+            <FooterNavListThree />
+          </Grid>
         </Grid>
-
-
       </Grid>
 
-      <Grid item sx={{marginLeft:'244px',marginTop:'48px',marginBottom:'38px'}}><FooterCopyRight /></Grid>
+      <Grid
+        item
+        justifyContent="center"
+        sx={{ marginLeft:"390px", marginTop: "48px", marginBottom: "38px" }}
+      >
+        <FooterCopyRight />
+      </Grid>
     </Grid>
   );
 };

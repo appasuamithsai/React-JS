@@ -34,5 +34,4 @@ export const AddTodo = ({addTodo}) => {
             </form>
         </div>
     );
-}
-    ;
+};

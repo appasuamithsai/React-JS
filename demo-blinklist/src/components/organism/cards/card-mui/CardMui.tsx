@@ -1,10 +1,12 @@
 import Card from "@mui/material/Card";
-import { CardMedia, Grid, Typography } from "@mui/material";
-import More from "../../../atoms/more/More";
+import { CardMedia, Grid } from "@mui/material";
 import BookTitle from "../../../atoms/booktitle/BookTitle";
 import AuthorName from "../../../atoms/author/AuthorName";
 import ReadTime from "../../../molecule/read-time/ReadTime";
 import ReadAgainButton from "../../../atoms/readagainbutton/ReadAgainButton";
+import CurrentBar from "../../../atoms/mui-bar/current-bar/CurrentBar";
+import FinishedBar from "../../../atoms/mui-bar/finished-bar/FinishedBar";
+import FinishedButton from "../../../atoms/finished-button/FinishedButton";
 interface Mui {
   details: {
     image: string;
@@ -14,12 +16,14 @@ interface Mui {
     finished:boolean,
   }[];
   handleReadAgain:(item:string)=>void;
+  handleFinish:(item:string)=>void;
 }
 
 const CardMui = (props: Mui) => {
   const bookCards = props.details.map((e) => (
     <Grid item>
-      <Card>
+      <Card sx={{
+        borderRadius: "8px",}}>
         <Grid container direction="column">
           <Grid item>
             <CardMedia
@@ -51,22 +55,11 @@ const CardMui = (props: Mui) => {
           >
             <ReadTime time={e.time} />
           </Grid>
-          <Grid item>
+          {/* <Grid item>
             <More />
-          </Grid>
+          </Grid> */}
           <Grid item>
-            { !e.finished?(<Typography
-              sx={{
-                width: "294px",
-                height: "15px",
-                position: "relative",
-
-                background: "#F1F6F4",
-                border: "1px solid #E1ECFC",
-                boxSizing: "border-box",
-                borderRadius: "0px 0px 8px 8px",
-              }}
-            />):<ReadAgainButton handleReadAgain={props.handleReadAgain} />}
+            { !e.finished?(<><FinishedButton name={e.name} handleFinish={props.handleFinish} /><CurrentBar /></>):(<> <ReadAgainButton name={e.name} handleReadAgain={props.handleReadAgain} /><FinishedBar /></>)}
           </Grid>
         </Grid>
       </Card>
@@ -74,7 +67,7 @@ const CardMui = (props: Mui) => {
   ));
 
   return (
-    <Grid columnSpacing="20px" rowSpacing="25px" container key="name">
+    <Grid columnSpacing="32px" sx={{width:'1000px'}} rowSpacing="32px" container key="name">
       {bookCards}
     </Grid>
   );

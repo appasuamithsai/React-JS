@@ -20,9 +20,8 @@ interface Handle{
 
 const BookDetailsGrid = (props:Handle) => {
   return (
-    <Box sx={{
-      marginLeft:'275px',marginTop:'40px'}}>
-      <Grid container columnSpacing='125px'>
+    <Box sx={{marginTop:'40px'}}>
+      <Grid container columnSpacing='125px' justifyContent="center">
         <Grid item>
           <Grid container>
             <Grid item>

@@ -16,7 +16,7 @@ interface Handle{
 
 const HeaderLeft = (props:Handle) => {
   return (
-    <Grid container sx={{ columnGap:'42px' , marginLeft:'250px' ,marginTop:'30px',marginBottom:'30px'}}>
+    <Grid container sx={{ columnGap:'42px'  ,marginTop:'30px',marginBottom:'30px'}}>
       <Grid item sx={{marginTop:'6px'}}>
           <BlinkImage />
       </Grid>

@@ -25,11 +25,11 @@ const MainSearch = (props:Handle) => {
           width:'658px',
           marginBottom:'0px',
           marginTop:'58px',
-          marginLeft:'270px',
           color:'#6D787E',
           padding:'16px',
           fontWeight:'700',
-          fontSize:'24px'
+          fontSize:'24px',
+          marginLeft: "445px",
       }}
       onChange={(e)=>{
         props.search(e.target.value.toLowerCase());

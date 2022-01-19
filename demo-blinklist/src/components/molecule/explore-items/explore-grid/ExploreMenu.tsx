@@ -63,15 +63,17 @@ const ExploreMenu = (props:Handle) => {
       <Box
          className={classes.exploreBoxTwo}
       >
-        <ExploreMenuHead />
-        <Divider className={classes.exploreDiv}  />
-        <Grid container rowSpacing="18px" className={classes.exploreGrid} >
-          {component.map((e) => (
-            <Grid item xs={4} key={e.id}>
-              {e.comp}
-            </Grid>
-          ))}
-        </Grid>
+        <Box width="1100px">
+          <ExploreMenuHead />
+          <Divider className={classes.exploreDiv}  />
+          <Grid container rowSpacing="18px" className={classes.exploreGrid} >
+            {component.map((e) => (
+              <Grid item xs={4} key={e.id}>
+                {e.comp}
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Box>
       <Box
         className={classes.exploreBoxThree}

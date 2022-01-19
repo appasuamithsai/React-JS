@@ -10,12 +10,13 @@ interface Books {
     finished:boolean,
   }[];
   handleReadAgain:(item:string)=>void;
+  handleFinish:(item:string)=>void;
 }
 
 const MainFinished = (props:Books) => {
   return (
     <div>
-      <CardMui  handleReadAgain={props.handleReadAgain} details={props.finishedReading} />
+      <CardMui  handleReadAgain={props.handleReadAgain} handleFinish={props.handleFinish} details={props.finishedReading} />
     </div>
   );
 };

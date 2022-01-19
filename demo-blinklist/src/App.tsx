@@ -105,30 +105,34 @@ function App() {
   const [btn, setbtn] = useState(false);
   const [icon, seticon] = useState(false);
   const handleFinish = (item: string) => {
-    let temp;
-    temp = readingBooks.find((e) => e.name === item);
-    if (temp === undefined) {
-      temp = { image: "", name: "", author: "", time: "", finished: false };
-    }
+    if(item==="Beyond Entrepreneurship 2.0"){
+          let temp;
+          temp = readingBooks.find((e) => e.name === item);
+          if (temp === undefined) {
+            temp = { image: "", name: "", author: "", time: "", finished: false };
+          }
 
-    temp.finished = true;
-    const a = readingBooks.filter((e) => e.name !== item);
-    readingBooks = a;
-    finishedBooks.push(temp);
-    setbtn(!btn);
+          temp.finished = true;
+          const a = readingBooks.filter((e) => e.name !== item);
+          readingBooks = a;
+          finishedBooks.push(temp);
+          setbtn(!btn);
+    }
   };
 
   const handleReadAgain = (item: string) => {
-    let temp;
-    temp = finishedBooks.find((e) => e.name === item);
-    if (temp === undefined) {
-      temp = { image: "", name: "", author: "", time: "", finished: false };
+    if(item==="Beyond Entrepreneurship 2.0"){
+          let temp;
+          temp = finishedBooks.find((e) => e.name === item);
+          if (temp === undefined) {
+            temp = { image: "", name: "", author: "", time: "", finished: false };
+          }
+          temp.finished = false;
+          const a = finishedBooks.filter((e) => e.name !== item);
+          finishedBooks = a;
+          readingBooks.push(temp);
+          setbtn(!btn);
     }
-    temp.finished = false;
-    const a = finishedBooks.filter((e) => e.name !== item);
-    finishedBooks = a;
-    readingBooks.push(temp);
-    setbtn(!btn);
   };
 
   const [visible, setvisible] = useState(false);
@@ -175,6 +179,7 @@ function App() {
                   currentReading={readingBooks}
                   finishedReading={finishedBooks}
                   handleReadAgain={handleReadAgain}
+                  handleFinish={handleFinish}
                 />
               </>
             }

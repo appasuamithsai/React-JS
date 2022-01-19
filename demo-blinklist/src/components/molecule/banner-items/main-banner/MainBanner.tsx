@@ -6,7 +6,7 @@ import BannerItems from '../banner-item/BannerItems';
 
 const MainBanner = () => {
     const classes=customStyle();
-    return (<Grid container className={classes.mainBanner}>
+    return (<Grid container className={classes.mainBanner} >
         <Grid item className={classes.mainBannerItem}>
             <BannerItems />
         </Grid>

@@ -55,6 +55,7 @@ interface Books {
     finished:boolean;
   }[];
   handleReadAgain:(item:string)=>void;
+  handleFinish:(item:string)=>void;
 }
 
 
@@ -73,7 +74,7 @@ const ReadingTabs = (props:Books) => {
       <TabContext value={value}>
         <Tabs
           value={value}
-          sx={{ marginLeft: "280px", marginTop: "60px" }}
+          sx={{ marginLeft: "445px", marginTop: "60px" }}
           onChange={handleChange}
         >
           <Tab
@@ -88,11 +89,13 @@ const ReadingTabs = (props:Books) => {
             className={bool === false ? classes.activeTab : classes.tabStyle}
           />
         </Tabs>
-        <TabPanel value="1" sx={{ marginLeft: "259px", marginRight: "259px" }}>
-          <MainReading handleReadAgain={props.handleReadAgain} currentReading={props.currentReading}/>
+        <TabPanel value="1" sx={{
+    marginLeft: "420px", marginRight: "259px" }}>
+          <MainReading handleReadAgain={props.handleReadAgain} handleFinish={props.handleFinish} currentReading={props.currentReading}/>
         </TabPanel>
-        <TabPanel value="2"  sx={{ marginLeft: "259px", marginRight: "259px" }}>
-          <MainFinished handleReadAgain={props.handleReadAgain} finishedReading={props.finishedReading}/>
+        <TabPanel value="2"  sx={{ 
+    marginLeft: "420px", marginRight: "259px" }}>
+          <MainFinished handleReadAgain={props.handleReadAgain} handleFinish={props.handleFinish} finishedReading={props.finishedReading}/>
         </TabPanel>
       </TabContext>
     </ThemeProvider>

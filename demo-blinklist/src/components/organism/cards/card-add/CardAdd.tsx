@@ -67,7 +67,7 @@ const CardAdd = (props: Mui) => {
       columnSpacing="20px"
       rowSpacing="25px"
       container
-      sx={{ marginTop: "25px", marginLeft: "259px", width: "1000px" }}
+      sx={{ marginTop: "25px",  marginLeft: "440px", width: "1000px" }}
     >
       {bookCards}
     </Grid>

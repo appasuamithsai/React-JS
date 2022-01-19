@@ -8,7 +8,7 @@ test("Testing ReadAgainButton",()=>{
     const func=()=>{
         console.log("fake func");
     };
-   render(<ReadAgainButton handleReadAgain={func} />);
+   render(<ReadAgainButton name="Harry" handleReadAgain={func} />);
    const test=screen.getByText("Read Again");
    expect(test).toBeInTheDocument();
 });

@@ -30,6 +30,9 @@ var customStyle = makeStyles({
     height: "230px",
     width: "250px",
     backgroundColor: "#F1F6F4",
+    marginTop: "17px",
+    marginBottom: "17px",
+    marginLeft: "112px",
   },
   bannerOne: {
     fontWeight: "700",
@@ -88,7 +91,7 @@ var customStyle = makeStyles({
     fontWeight: "400",
     color: "#03314B",
     marginTop: "60px",
-    marginLeft: "275px",
+    marginLeft: "455px",
   },
   bookTitleOne: {
     fontStyle: "normal",
@@ -103,6 +106,11 @@ var customStyle = makeStyles({
     textTransform: "none",
     fontWeight: 500,
     color: "#03314B",
+    "&:hover": {
+      borderBottom: "3px solid #2CE080",
+      borderRadius: "0px",
+      background: "none",
+    },
   },
   buttons: {
     textTransform: "none",
@@ -155,11 +163,12 @@ var customStyle = makeStyles({
     "&:hover": {
       backgroundColor: "#0365F2",
       color: "#FFFFFF",
+      borderRadius: "0px",
     },
   },
   head: {
     marginTop: "59px",
-    marginLeft: "280px",
+    marginLeft: "455px",
     fontSize: "24px",
     fontWeight: 700,
     color: "#03314B",
@@ -175,7 +184,7 @@ var customStyle = makeStyles({
   },
   myLibraryHead: {
     marginTop: "59px",
-    marginLeft: "280px",
+    marginLeft: "445px",
     fontSize: "36px",
     fontWeight: 700,
     color: "#03314B",
@@ -188,15 +197,16 @@ var customStyle = makeStyles({
   avatarDrop: {
     marginBottom: "23px",
     marginTop: "29px",
-    marginLeft: "272px",
+    marginLeft: "292px",
   },
   avatarNavDown: {
     marginTop: "7px",
   },
   mainBanner: {
     backgroundColor: "#F1F6F4",
-    marginLeft: "270px",
-    width: "912px",
+    marginLeft: "455px",
+    width: "920px",
+    marginTop: "32px",
   },
   mainBannerItem: {
     margin: "45px",
@@ -226,13 +236,13 @@ var customStyle = makeStyles({
     left: 0,
   },
   bookDetalisTabsOne: {
-    marginLeft: "275px",
+    marginLeft: "450px",
     marginTop: "40px",
   },
   bookDetalisTabsTwo: {
     padding: "0px",
     marginTop: "20px",
-    marginLeft: "275px",
+    marginLeft: "450px",
   },
   bookDetalisTabsTypo: {
     fontSize: "16px",
@@ -243,9 +253,10 @@ var customStyle = makeStyles({
   exploreBoxOne: {
     position: "absolute",
     height: "100%",
+    width: "100%",
   },
   exploreBoxTwo: {
-    paddingLeft: "254px",
+    paddingLeft: "455px",
     backgroundColor: "#F1F6F4",
     paddingBottom: "15px",
   },
@@ -256,7 +267,7 @@ var customStyle = makeStyles({
     opacity: "0.4",
   },
   exploreDiv: {
-    marginRight: "250px",
+    marginRight: "170px",
   },
   exploreGrid: {
     paddingTop: "10px",
@@ -280,7 +291,24 @@ var customStyle = makeStyles({
     width: "124px",
   },
   blinkHighlightGridThree: {
-    marginTop:'32px',
+    marginTop: "32px",
+  },
+  finishedBar: {
+    width: "295px",
+    height: "15px",
+    position: "relative",
+    background: "#DFE8F6",
+    boxSizing: "border-box",
+    borderRadius: "0px 0px 8px 8px",
+  },
+  currentBar: {
+    width: "295px",
+    height: "15px",
+    position: "relative",
+    background: "#F1F6F4",
+    border: "1px solid #E1ECFC",
+    boxSizing: "border-box",
+    borderRadius: "0px 0px 8px 8px",
   },
 });
 
