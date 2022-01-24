@@ -6,7 +6,7 @@ const PersonList = () => {
   const [id,setId]=useState(1);
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/users`)
+      .get(`http://localhost:8000/user`)
       .then((response) => {
         setPerson(response.data);
       })
@@ -17,7 +17,7 @@ const PersonList = () => {
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/users/${id}`)
+      .get(`http://localhost:8000/user/${id}`)
       .then((response) => {
         setPost(response.data);
       })
